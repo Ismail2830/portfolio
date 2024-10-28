@@ -16,7 +16,7 @@ export default function Banner() {
   return (
     <div className="relative flex flex-col items-center min-h-screen p-6 max-w-5xl mx-auto">
       {/* Sidebar for Contact Icons */}
-      <div className="fixed flex flex-col items-center gap-y-6 left-12 top-1/2 transform -translate-y-1/2">
+      <div className="hidden fixed lg:flex flex-col items-center gap-y-6 left-12 top-1/2 transform -translate-y-1/2">
         <a href="https://www.linkedin.com/in/ismail-ait-rehail-7564b4209/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700">
           <Linkedin size={24} />
         </a>
@@ -57,9 +57,24 @@ export default function Banner() {
             onClick={handleDownload}
         >
           
-            Download My Resume
+            Télécharger mon CV
             <MousePointer2 />
         </Button>
+      </div>
+        {/* Contact Icons (visible only on small screens, below avatar) */}
+        <div className="flex lg:hidden flex-row gap-x-4 mt-8">
+        <a href="https://www.linkedin.com/in/ismail-ait-rehail-7564b4209/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700">
+          <Linkedin size={24} />
+        </a>
+        <a href="https://x.com/IRehail" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-400">
+          <Twitter size={24} />
+        </a>
+        <a href="https://github.com/Ismail2830" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black">
+          <Github size={24} />
+        </a>
+        <a href="mailto:ismailaitrehail2830@gmail.com" className="text-gray-600 hover:text-yellow-600">
+          <Mail size={24} />
+        </a>
       </div>
     </div>
   );

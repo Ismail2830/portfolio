@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Projects = () => {
   return (
     <section className="py-8 px-4">
-      <h2 className="text-3xl font-bold text-center mb-4">Our Projects</h2>
+      <h2 className="text-3xl font-bold text-center mb-4">Mes Projets</h2>
       <div className="h-1 w-1/4 bg-gray-300 mx-auto mb-8"></div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
