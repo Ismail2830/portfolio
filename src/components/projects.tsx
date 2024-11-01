@@ -14,6 +14,30 @@ const Projects = () => {
         {/* Project 1 */}
         <div className="border rounded-lg overflow-hidden shadow-lg">
           <Image
+            src="/project4.png" // Replace with your image path
+            alt="Project 4"
+            width={400}
+            height={250}
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-4">
+            <h3 className="text-xl font-semibold mb-2">Jira Clone</h3>
+            <p className="text-gray-700 mb-4">
+              Clone complet de Jira, avec espaces de travail, projets / épopées, tâches,
+              tableaux kanban, calendriers, édition et suppression de tâches, système
+              d'invitation, système de contrôle d'accès basé sur les rôles,
+              téléchargement d'images, analyse, authentification.
+            </p>
+            <Button className="w-full" asChild>
+                <Link target='_blank' href="https://github.com/Ismail2830/jira-clone">
+                    Vérifier le code source
+                </Link>
+            </Button>
+          </div>
+        </div>
+        {/* Project 2 */}
+        <div className="border rounded-lg overflow-hidden shadow-lg">
+          <Image
             src="/project1.png" // Replace with your image path
             alt="Project 1"
             width={400}

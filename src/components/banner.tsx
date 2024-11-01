@@ -7,8 +7,8 @@ import { Github, Linkedin, Mail, MousePointer2, Twitter } from "lucide-react";
 export default function Banner() {
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = '/resume.pdf'; // Use the path relative to the `public` folder
-        link.download = 'resume.pdf'; // Optional: specify a custom download filename
+        link.href = '/ismailResume.pdf'; // Use the path relative to the `public` folder
+        link.download = 'ismailResume.pdf'; // Optional: specify a custom download filename
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
