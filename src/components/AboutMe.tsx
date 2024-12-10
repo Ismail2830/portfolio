@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Linkedin } from "lucide-react";
 
 const AboutMe = () => {
   return (
