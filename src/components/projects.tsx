@@ -1,111 +1,109 @@
-import React from 'react'
-import { Button } from './ui/button'
-import Image from 'next/image'
-import Link from 'next/link'
+"use client";
+
+import { motion } from "framer-motion";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+const projects = [
+  {
+    title: "Personal Portfolio",
+    image: "/project 5.png",
+    description:
+      "Complete Jira clone with workspaces, projects, tasks, Kanban boards, etc.",
+    technologies: "Next.js, Tailwind, Framer Motion",
+    link: "https://personal-portfolio-murex-eight-99.vercel.app/",
+  },
+  {
+    title: "Saas Writing Portfolio",
+    image: "/project6.png",
+    description:
+      "Complete Jira clone with workspaces, projects, tasks, Kanban boards, etc.",
+    technologies: "Next.js, Tailwind, Prisma",
+    link: "https://saas-writing-portfolio.vercel.app/",
+  },
+  {
+    title: "Jira Clone",
+    image: "/project4.png",
+    description:
+      "Complete Jira clone with workspaces, projects, tasks, Kanban boards, etc.",
+    technologies: "Next.js, Tailwind, Prisma",
+    link: "https://github.com/Ismail2830/jira-clone",
+  },
+  {
+    title: "Messenger Clone",
+    image: "/project1.png",
+    description:
+      "Real-time Messenger clone with Next.js, React, Tailwind, Prisma, MongoDB.",
+    technologies: "Next.js, Tailwind, MongoDB",
+    link: "https://github.com/Ismail2830/messanger-clone",
+  },
+  {
+    title: "Learning Management System",
+    image: "/project2.png",
+    description:
+      "Responsive platform for the learning management system.",
+    technologies: "Next.js, TypeScript, MySQL",
+    link: "https://github.com/Ismail2830/lms-platform",
+  },
+  {
+    title: "Authentication with NextJS",
+    image: "/project3.png",
+    description:
+      "Add advanced authentication to your Next.js application.",
+    technologies: "Next.js, NextAuth",
+    link: "https://github.com/Ismail2830/Next-auth",
+  },
+];
 
 const Projects = () => {
   return (
-    <section className="py-8 px-4">
-      <h2 className="text-3xl font-bold text-center mb-4">Mes Projets</h2>
-      <div className="h-1 w-1/4 bg-gray-300 mx-auto mb-8"></div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        {/* Project 1 */}
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src="/project4.png" // Replace with your image path
-            alt="Project 4"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-semibold mb-2">Jira Clone</h3>
-            <p className="text-gray-700 mb-4">
-              Clone complet de Jira, avec espaces de travail, projets / épopées, tâches,
-              tableaux kanban, calendriers, édition et suppression de tâches, système
-              d'invitation, système de contrôle d'accès basé sur les rôles,
-              téléchargement d'images, analyse, authentification.
-            </p>
-            <Button className="w-full" asChild>
-                <Link target='_blank' href="https://github.com/Ismail2830/jira-clone">
-                    Vérifier le code source
-                </Link>
-            </Button>
-          </div>
-        </div>
-        {/* Project 2 */}
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src="/project1.png" // Replace with your image path
-            alt="Project 1"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-semibold mb-2">Messanger Clone</h3>
-            <p className="text-gray-700 mb-4">
-            Clone de Messenger en temps réel : Next.js 13, React, Tailwind,Prisma, MongoDB, NextAuth, Pusher
-            </p>
-            <Button className="w-full" asChild>
-                <Link target='_blank' href="https://github.com/Ismail2830/messanger-clone?tab=readme-ov-file#readme">
-                    Vérifier le code source
-                </Link>
-            </Button>
-          </div>
-        </div>
-
-        {/* Project 2 */}
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src="/project2.png" // Replace with your image path
-            alt="Project 2"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-semibold mb-2">Système de gestion de l'apprentissage</h3>
-            <p className="text-gray-700 mb-4">
-                Développement d'une plateforme responsive pour le système de
-                gestion de l'apprentissage avec Next.js 13, TypeScript, MySQL, Stripe,
-                Prisma, Tailwind CSS.
-            </p>
-            <Button className="w-full" asChild>
-                <Link target='_blank' href="https://github.com/Ismail2830/lms-platform">
-                    Vérifier le code source
-                </Link>
-            </Button>
-          </div>
-        </div>
-
-        {/* Project 3 */}
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src="/project3.png" // Replace with your image path
-            alt="Project 3"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-semibold mb-2">l'authentification avec NextJS</h3>
-            <p className="text-gray-700 mb-4">
-                l'authentification avancée à votre application NextJS.
-            </p>
-            <Button className="w-full" asChild>
-                <Link target='_blank' href="https://github.com/Ismail2830/Next-auth">
-                    Vérifier le code source
-                </Link>
-            </Button>
-          </div>
-        </div>
-
+    <section className="py-16 px-6 bg-white">
+      <h2
+        className="text-4xl font-bold text-center mb-8"
+        style={{ fontFamily: "'Sour Gummy', cursive" }}
+      >
+        Featured Projects
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="border rounded-lg overflow-hidden shadow-lg bg-white"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+          >
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={400}
+              height={250}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3
+                className="text-xl font-semibold mb-2"
+                style={{ fontFamily: "'Sour Gummy', cursive" }}
+              >
+                {project.title}
+              </h3>
+              <p className="text-blue-600 text-sm italic mb-2">
+                {project.technologies}
+              </p>
+              <p className="text-gray-700 mb-4">{project.description}</p>
+              <Link href={project.link} target="_blank">
+                <button className="w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition">
+                  View Project
+                </button>
+              </Link>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

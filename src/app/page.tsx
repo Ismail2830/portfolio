@@ -1,4 +1,7 @@
-import Banner from "@/components/banner";
+
+import AboutMe from "@/components/AboutMe";
+import FooterForm from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
 
@@ -6,8 +9,17 @@ export default function Home() {
   return (
     <div className="items-center justify-items-centerp-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <Navbar />
-      <Banner />
-      <Projects />
+      <HeroSection />
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="about-me">
+        <AboutMe />
+      </section>
+      <section id="footer">
+      <FooterForm />
+      </section>
+      
     </div>
   );
 }
