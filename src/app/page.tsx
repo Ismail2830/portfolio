@@ -4,6 +4,7 @@ import FooterForm from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
+import ServicesSection from "@/components/Service";
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
       <HeroSection />
       <section id="projects">
         <Projects />
+      </section>
+      <section id="services">
+        <ServicesSection />
       </section>
       <section id="about-me">
         <AboutMe />

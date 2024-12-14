@@ -10,7 +10,7 @@ const projects = [
     title: "Personal Portfolio",
     image: "/project 5.png",
     description:
-      "Complete Jira clone with workspaces, projects, tasks, Kanban boards, etc.",
+      "Interactive personal portfolio built with Next.js, Tailwind CSS, and Framer Motion. This project showcases my skills, experience, and projects with smooth animations and a modern, responsive design. Using the power of Next.js for server-side rendering and Tailwind CSS for utility-first styling, combined with Framer Motion for engaging animations, the portfolio delivers a seamless user experience across all devices.",
     technologies: "Next.js, Tailwind, Framer Motion",
     link: "https://personal-portfolio-murex-eight-99.vercel.app/",
   },
@@ -18,8 +18,8 @@ const projects = [
     title: "Saas Writing Portfolio",
     image: "/project6.png",
     description:
-      "Complete Jira clone with workspaces, projects, tasks, Kanban boards, etc.",
-    technologies: "Next.js, Tailwind, Prisma",
+      "A professional SaaS writing portfolio showcasing my expertise in creating high-quality, engaging content for Software-as-a-Service (SaaS) businesses. This portfolio features a collection of case studies, blog posts, product documentation, and other writing samples tailored to the unique needs of the SaaS industry, highlighting my ability to communicate complex concepts clearly and effectively.",
+    technologies: "Next.js, Tailwind, Framer Motion",
     link: "https://saas-writing-portfolio.vercel.app/",
   },
   {
