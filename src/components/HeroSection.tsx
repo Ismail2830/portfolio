@@ -18,9 +18,9 @@ export default function HeroSection() {
   }, []);
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/ismailResume.pdf'; // Use the path relative to the `public` folder
-    link.download = 'ismailResume.pdf'; // Optional: specify a custom download filename
+    const link = document.createElement("a");
+    link.href = "/ismailResume.pdf"; // Use the path relative to the `public` folder
+    link.download = "ismailResume.pdf"; // Optional: specify a custom download filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -31,11 +31,20 @@ export default function HeroSection() {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-left space-y-6">
-        <h1
+          <h1
             className="text-9xl font-bold text-gray-900"
             style={{ fontFamily: "'Roboto', sans-serif" }}
           >
-            Hey, I'm <span className="text-blue-600">ISMAIL</span>
+            Hey, I'm
+            <motion.span
+              className="inline-block ml-2"
+              style={{ display: "inline-block" }}
+              animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }} // Waving animation
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              👋
+            </motion.span>{" "}
+            <span className="text-blue-600">ISMAIL</span>
           </h1>
           <AnimatePresence mode="wait">
             <motion.div
@@ -49,7 +58,10 @@ export default function HeroSection() {
               I am a {roles[currentRoleIndex]}
             </motion.div>
           </AnimatePresence>
-          <Button onClick={handleDownload} className="px-6 py-3 rounded-lg border-2 border-blue-600 text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white transition">
+          <Button
+            onClick={handleDownload}
+            className="px-6 py-3 rounded-lg border-2 border-blue-600 text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white transition"
+          >
             Download My Resume
           </Button>
         </div>
